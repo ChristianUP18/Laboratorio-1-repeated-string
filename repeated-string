@@ -1,0 +1,30 @@
+/*CADENA REPETIDA*/
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+     
+    string s;
+    int r;
+    cin >> s;
+    long long n;
+    cin >> n;
+    int x = 0;
+    int y = 0;
+    for (int i = 0; i < (int)s.size(); i++)
+    {
+        if (s[i] == 'a')
+        {
+           x++;
+        }
+        if ((long long)i < n % (long long)s.size() && s[i] == 'a')
+        {
+            y++;/*CADENA REPETIDA*/
+        }
+    }
+    
+    cout << n / (long long)s.size() * (long long)x + (long long) y << endl;
+    return 0;
+}
